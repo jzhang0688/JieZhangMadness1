@@ -1,9 +1,26 @@
 package JieZhang;
 
 public class JZhangLib {
-    public static void test()
+    public static String dateStr(String input)
     {
-        System.out.println("hi!");
+        int i = 0;
+        String output = "";
+
+        while( i < input.length() )
+
+        {
+            if (!(input.substring(i,i+1).equals("/")))
+            {
+                output = output + input.substring(i,i+1);
+                i++;
+            }
+            else
+            {
+                i++;
+            }
+
+        }
+        return output;
     }
 }
 
